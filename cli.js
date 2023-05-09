@@ -4,6 +4,7 @@ import minimist from "minimist";
 import fetch from "node-fetch";
 import moment from "moment-timezone";
 
+//gets arguments without first 2
 const args = minimist(process.argv.slice(2));
 
 function exit(x) {
@@ -34,7 +35,7 @@ const latitude = args.n || args.s*-1;
 //gets data from url of api
 const res = await fetch('https://api.open-meteo.com/v1/forecase?latitude='+ latitude +'&longitude='+ longitude + '&hourly=temperature_2m');
 //converts data to json
-const data = await Response.json();
+const data = await res.json();
 
 // print data if -j command
 if (args.j) {
