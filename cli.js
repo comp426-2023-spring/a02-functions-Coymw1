@@ -33,7 +33,7 @@ const longitude = args.e || args.w*-1;
 const latitude = args.n || args.s*-1;
 
 //gets data from url of api
-const res = await fetch('https://api.open-meteo.com/v1/forecase?latitude='+ latitude +'&longitude='+ longitude + '&hourly=temperature_2m');
+const res = await fetch('https://api.open-meteo.com/v1/forecase?latitude='+latitude+'&longitude='+longitude+'&hourly=temperature_2m');
 //converts data to json
 const data = await res.json();
 
@@ -46,6 +46,6 @@ if (args.j) {
 
 if (args.d == 0) {console.log("today.");}
 
-if (args.d > 1) {console.log("in " + args.d)}
+if (args.d > 1) {console.log("in " + args.d + " days.")}
 
-if (args.d <= 1) {console.log("tomorrow")};
+else {console.log("tomorrow")};
