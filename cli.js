@@ -32,7 +32,7 @@ const longitude = args.e || args.w*-1;
 const latitude = args.n || args.s*-1;
 
 //gets data from url of api
-const res = await fetch('https://api.open-meteo.com/v1/forecase?latitude='+ lat +'&longitude='+ long + '&hourly=temperature_2m');
+const res = await fetch('https://api.open-meteo.com/v1/forecase?latitude='+ latitude +'&longitude='+ longitude + '&hourly=temperature_2m');
 //converts data to json
 const data = await Response.json();
 
