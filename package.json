@@ -1,0 +1,29 @@
+{
+  "name": "a02-functions-coymw1",
+  "version": "1.0.0",
+  "description": "api functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "node cli.js -n 35.92 -w 79.05 -z America/New_York"
+  },
+  "repository": {
+    "type": "git",
+    "url": "a02-functions-Coymw1"
+  },
+  "author": "Coymw1",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2023-spring/a02-functions-Coymw1/issues"
+  },
+  "bin": {
+    "galosh.js": "./cli.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "minimist": "^1.2.8",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.43",
+    "node-fetch": "^3.3.1"
+  },
+  "homepage": "https://github.com/comp426-2023-spring/a02-functions-Coymw1#readme"
+}
