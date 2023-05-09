@@ -32,6 +32,9 @@ const zone = moment.tz.guess();
 const longitude = args.e || args.w*-1;
 const latitude = args.n || args.s*-1;
 
+if (!longitude) {console.log('Longitude must be in range')}
+if (!latitude) {console.log('Latitude must be in range')}
+
 //gets data from url of api
 const res = await fetch('https://api.open-meteo.com/v1/forecase?latitude='+latitude+'&longitude='+longitude+'&hourly=temperature_2m');
 //converts data to json
